@@ -9,6 +9,7 @@ import android.widget.Toast
 import android.widget.Toast.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
+import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         val resultText: TextView = findViewById(R.id.result_text)
-        resultText.text = "Dice rolled!"
+        val randomInt = Random().nextInt(6) + 1
+        resultText.text = randomInt.toString()
     }
 }
 
